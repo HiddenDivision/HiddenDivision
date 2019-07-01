@@ -30,7 +30,9 @@ bot.on('message', msg=>{
 		msg.reply('Ｓｔａｙ  ｈｉｄｄｅｎ  ｔｈｅｎ．');
 	}
 	if(msg.content === "Pwease send Spanzer's thighs."){
-		const attachement = new Attachment('https://cdn.discordapp.com/attachments/574629212258959387/594448748256428042/JPEG_20190510_205536.jpg');
+		let random = ["https://cdn.discordapp.com/attachments/574629212258959387/594448748256428042/JPEG_20190510_205536.jpg", "https://cdn.discordapp.com/attachments/574629212258959387/594457287507312651/JPEG_20190510_212454.jpg", "https://cdn.discordapp.com/attachments/574629212258959387/594449955804938249/20190512_120019.jpg"]
+		let result = Math.floor((Math.random() * random.length));
+		let attachement = new Attachment(result);
 		msg.channel.sendMessage(attachement);
 	}
 	let args = msg.content.substring(PREFIX.length).split(" ");
