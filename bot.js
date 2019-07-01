@@ -6,6 +6,7 @@ const PREFIX = '​';
 
 bot.on('ready', () =>{
 	console.log('Hidden division is now hidden.');
+	bot.user.setActivity('you.', { type: ('WATCHING')})
 })
 
 bot.on('guildMemberAdd', member =>{
