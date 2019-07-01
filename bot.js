@@ -1,7 +1,6 @@
 const {Client, Attachment, RichEmbed, Guild, GuildMember, MessageMentions, Role} = require('discord.js');
 const bot = new Client();
 
-const token = 'NTk1MDQ3ODY2OTk3ODAwOTYw.XRlbTA.JgQzN_iGs4ejQU1-DqoNOn5dpDo';
 
 const PREFIX = '​';
 
