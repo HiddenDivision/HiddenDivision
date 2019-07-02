@@ -46,7 +46,9 @@ bot.on('message', msg=>{
 			msg.channel.sendEmbed(embed);
 		break;
 		case 'purge':
-			if(!args[1]) return msg.channel.sendMessage('Please specify a number of messages to be purged!')
+			if(!msg.member.hasPermission("MANAGE_MESSAGES")) return msg.channel.sendMessage("You don't have the permission to purge messages!");
+			if(!msg.guild.me.hasPermission("MANAGE_MESSAGES")) return msg.channel.sendMessage("I don't have the allowed permission to purge messages!");
+			if(!args[1]) return msg.channel.sendMessage('Please specify a number of messages to be purged!');
 			msg.channel.bulkDelete(args[1]);
 		break;
 		case 'kick':
