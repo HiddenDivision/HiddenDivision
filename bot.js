@@ -94,6 +94,22 @@ bot.on('message', msg=>{
 		const attachement = new Attachment('https://cdn.discordapp.com/attachments/545281417571991572/595472395159076890/ah.mp4');
 		msg.channel.sendMessage(attachement);
 	}
+	let args2 = msg.content.substring(testpre.length).split(" ");
+	switch(args2[0]){
+		case 'OwO':
+			if(!args2[1]) return msg.channel.sendMessage('OwO?');
+			const owoMessage = args2.join(" ").slice(4);
+			someString = owoMessage
+			anotherString = someString.replace(/r/g, 'w');
+			s1 = anotherString.replace(/R/g, 'W');
+			s2 = s1.replace(/y/g, 'w');
+			s3 = s2.replace(/Y/g, 'W');
+			s4 = s3.replace(/h/g, 'w');
+			s5 = s4.replace(/H/g, 'W');
+			msg.channel.bulkDelete('1');
+			msg.channel.sendMessage(s5);
+		break;
+	}
 	let args = msg.content.substring(PREFIX.length).split(" ");
 	switch(args[0]){
 		case 'purge':
