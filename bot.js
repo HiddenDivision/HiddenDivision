@@ -106,8 +106,10 @@ bot.on('message', msg=>{
 			s3 = s2.replace(/Y/g, 'W');
 			s4 = s3.replace(/h/g, 'w');
 			s5 = s4.replace(/H/g, 'W');
+			s6 = s5.replace(/l/g, 'w');
+			s7 = s6.replace(/L/g, 'W');
 			msg.channel.bulkDelete('1');
-			msg.channel.sendMessage(s5);
+			msg.channel.sendMessage(s7);
 		break;
 	}
 	let args = msg.content.substring(PREFIX.length).split(" ");
