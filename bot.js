@@ -1,6 +1,6 @@
 const {Client, Attachment, RichEmbed, Guild, GuildMember, MessageMentions, Role} = require('discord.js');
 const bot = new Client();
-
+const superagent = require('superagent');
 
 const PREFIX = '​';
 
@@ -34,6 +34,24 @@ bot.on('message', msg=>{
 	}
 	if(msg.content === "-test"){
 		msg.channel.sendMessage('This is a test.');
+	}
+	if(msg.content === "-meme"){
+		let message = await msg.channel.sendMessage('Generating...');
+		
+		let {body} = await superagent
+		.get('https://apis.duncte123.me/meme');
+		if(!{body}) return msg.channel.sendMessage("An error occured. Try again!);
+		
+		let membed = new RichEmbed()
+		.setColor(0x160033)
+		.setAuthor('Ɦıᴅᴅᴇɴ Ðıᴠısıᴏɴ', msg.guild.iconURL)
+		.setImage(body.url)
+		.setTimestamp()
+		.setFooter('Ɦıᴅᴅᴇɴ Ðıᴠısıᴏɴ', bot.user.displayAvatarURL)
+		
+		msg.channel.sendMessage({embed: membed})
+		
+		message.delete();
 	}
 	if(msg.content === "-help"){
 		const embed = new RichEmbed()
