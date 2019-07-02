@@ -32,31 +32,25 @@ bot.on('message', msg=>{
 	if(msg.content === "I'm not hidden."){
 		msg.reply('Why are you still here then?');
 	}
-	if(msg.content === "-meme"){
-		let message = await msg.channel.sendMessage('Generating...');
-		
-		let {body} = await superagent
-		.get('https://apis.duncte123.me/meme');
-		if(!{body}) return msg.channel.sendMessage("An error occured. Try again!");
-		
-		let membed = new RichEmbed()
-		.setColor(0x160033)
-		.setAuthor('Ɦıᴅᴅᴇɴ Ðıᴠısıᴏɴ', msg.guild.iconURL)
-		.setImage(body.url)
-		.setTimestamp()
-		.setFooter('Ɦıᴅᴅᴇɴ Ðıᴠısıᴏɴ', bot.user.displayAvatarURL)
-		
-		msg.channel.sendMessage({embed: membed})
-		
-		message.delete();
-	}
 	if(msg.content === "-test"){
 		msg.channel.sendMessage('This is a test.');
+	}
+	if(msg.content === "-gang info"){
+		const gembed = new RichEmbed()
+		.setTitle('Ɦıᴅᴅᴇɴ Ðıᴠısıᴏɴ infos :')
+		.addField('Members', "18 Official members")
+		.addField('Allies', "Trash Gang (Kideath) \n Spanzer Gang (Spanzer) \n Ωmega Gang (Ashlee | Ωmega) \n File Drop Zone (ShadowWovle)")
+		.setColor(0x160033);
+		msg.channel.sendEmbed(gembed);
+	}
+	if(msg.content === "-allies"){
+		msg.author.sendMessage("only a quick test.");
+		msg.channel.sendMessage("Allies invite links has been sent to you in your DM's");
 	}
 	if(msg.content === "-help"){
 		const embed = new RichEmbed()
 		.setTitle('Available Commands :')
-		.addField('General commands', "'help' : Shows you all available commands. \n 'kick' (With the hidden prefix) : Kicks a specific user from the server. \n 'ban' (With the hidden prefix) : Ban a specific user from the server. \n 'purge' (With the hidden prefix) : Pruge a specific amount of messages on the channel.")
+		.addField('General commands', "'help' : Shows you all available commands. \n 'gang info' : Shows you all information of Ɦıᴅᴅᴇɴ Ðıᴠısıᴏɴ. \n 'allies' : Sends you all allies invite links in your DM's. \n 'kick' (With the hidden prefix) : Kicks a specific user from the server. \n 'ban' (With the hidden prefix) : Ban a specific user from the server. \n 'purge' (With the hidden prefix) : Pruge a specific amount of messages on the channel.")
 		.addField('Entertainment commands', "'test' : Just a test. \n 'Pwease send Spanzer's thighs.' (Without the prefix) : Send's Spanzer's thighs. \n 'ah.mp4' (Without the prefix) : Ah! (earrape). \n 'I'm hidden.' (Without the prefix) : Of course you better be hidden. \n 'I'm not hidden.' (Without the prefix) : Please don't say that.")
 		.addField('Current normal prefix', "'-' : It's the current prefix. \n The hidden prefix is secret and kept away from others for more security.")
 		.setColor(0x160033)
