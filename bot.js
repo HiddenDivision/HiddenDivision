@@ -41,7 +41,7 @@ bot.on('message', msg=>{
 		case 'help':
 			const embed = new RichEmbed()
 			.setTitle('Available Commands :')
-			.addField('General commands', "'help' : Shows you all available commands. \n 'kick' : Kicks a specific user from the server. \n 'ban' : Ban a specific user from the server.")
+			.addField('General commands', "'help' : Shows you all available commands. \n 'kick' : Kicks a specific user from the server. \n 'ban' : Ban a specific user from the server. \n 'purge' : Pruge a specific amount of messages on the channel.")
 			.addField('Entertainment commands', "'test' : Just a test. \n 'Pwease send Spanzer's thighs.' (Without the prefix) : Send's Spanzer's thighs.")
 			msg.channel.sendEmbed(embed);
 		break;
