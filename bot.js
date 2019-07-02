@@ -35,6 +35,36 @@ bot.on('message', msg=>{
 	if(msg.content === "-test"){
 		msg.channel.sendMessage('This is a test.');
 	}
+	if(msg.content === "-meme"){
+		const randomPuppy = require('random-puppy');
+		const snekfetch = require('snekfetch');
+		let reddit = [
+			"meme",
+			"animemes",
+			"MemesOfAnime",
+			"animememes",
+			"AnimeFunny",
+			"dankmemes",
+			"dankmeme",
+			"wholesomememes",
+			"MemeEconomy",
+			"meirl",
+			"me_irl",
+			"2meirl4meirl"
+		];
+		let subreddit = reddit[Math.floor(Math.random() * reddit.length - 1)];
+		msg.channel.startTyping();
+		randomPuppy(subreddit).then(url =>{
+			snekfetch.get(url).then(async res =>{
+				await msg.channel.sendMessage({
+					files: [{
+						attachment: res.body,
+						name: 'meme.png'
+					}]
+				}).then(msg.channel.stopTyping());
+			});
+		});
+	}
 	if(msg.content === "-gang info"){
 		const gembed = new RichEmbed()
 		.setTitle('Ɦıᴅᴅᴇɴ Ðıᴠısıᴏɴ infos :')
