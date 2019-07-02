@@ -81,7 +81,7 @@ bot.on('message', msg=>{
 		const embed = new RichEmbed()
 		.setTitle('Available Commands :')
 		.addField('General commands', "'help' : Shows you all available commands. \n 'gang info' : Shows you all information of Ɦıᴅᴅᴇɴ Ðıᴠısıᴏɴ. \n 'allies' : Sends you all allies invite links in your DM's. \n 'kick' (With the hidden prefix) : Kicks a specific user from the server. \n 'ban' (With the hidden prefix) : Ban a specific user from the server. \n 'purge' (With the hidden prefix) : Pruge a specific amount of messages on the channel.")
-		.addField('Entertainment commands', "'test' : Just a test. \n 'Pwease send Spanzer's thighs.' (Without the prefix) : Send's Spanzer's thighs. \n 'ah.mp4' (Without the prefix) : Ah! (earrape). \n 'I'm hidden.' (Without the prefix) : Of course you better be hidden. \n 'I'm not hidden.' (Without the prefix) : Please don't say that.")
+		.addField('Entertainment commands', "'test' : Just a test. \n 'meme' : Sends memes. \n 'Pwease send Spanzer's thighs.' (Without the prefix) : Send's Spanzer's thighs. \n 'ah.mp4' (Without the prefix) : Ah! (earrape). \n 'I'm hidden.' (Without the prefix) : Of course you better be hidden. \n 'I'm not hidden.' (Without the prefix) : Please don't say that.")
 		.addField('Current normal prefix', "'-' : It's the current prefix. \n The hidden prefix is secret and kept away from others for more security.")
 		.setColor(0x160033)
 		msg.channel.sendEmbed(embed);
