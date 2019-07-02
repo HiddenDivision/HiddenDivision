@@ -29,6 +29,9 @@ bot.on('message', msg=>{
 	if(msg.content === "I'm hidden."){
 		msg.reply('Ｓｔａｙ  ｈｉｄｄｅｎ  ｔｈｅｎ．');
 	}
+	if(msg.content === "I'm not hidden."){
+		msg.reply('Why are you still here then?');
+	}
 	if(msg.content === "Pwease send Spanzer's thighs."){
 		const attachement = new Attachment('https://cdn.discordapp.com/attachments/574629212258959387/594448748256428042/JPEG_20190510_205536.jpg');
 		msg.channel.sendMessage(attachement);
