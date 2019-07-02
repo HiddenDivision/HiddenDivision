@@ -32,26 +32,27 @@ bot.on('message', msg=>{
 	if(msg.content === "I'm not hidden."){
 		msg.reply('Why are you still here then?');
 	}
+	if(msg.content === "-test"){
+		msg.channel.sendMessage('This is a test.');
+	}
+	if(msg.content === "-help"){
+		const embed = new RichEmbed()
+		.setTitle('Available Commands :')
+		.addField('General commands', "'help' : Shows you all available commands. \n 'kick' (With the hidden prefix) : Kicks a specific user from the server. \n 'ban' (With the hidden prefix) : Ban a specific user from the server. \n 'purge' (With the hidden prefix) : Pruge a specific amount of messages on the channel.")
+		.addField('Entertainment commands', "'test' : Just a test. \n 'Pwease send Spanzer's thighs.' (Without the prefix) : Send's Spanzer's thighs. \n 'I'm hidden.' (Without the prefix) : Of course you better be hidden. \n 'I'm not hidden.' (Without the prefix) : Please don't say that.")
+		.addField('Current normal prefix', "'-' : It's the current prefix. \n The hidden prefix is secret and kept away from others for more security.")
+		msg.channel.sendEmbed(embed);
+	}
 	if(msg.content === "Pwease send Spanzer's thighs."){
 		const attachement = new Attachment('https://cdn.discordapp.com/attachments/574629212258959387/594448748256428042/JPEG_20190510_205536.jpg');
 		msg.channel.sendMessage(attachement);
 	}
-	if(msg.content === "Ah.mp4"){
+	if(msg.content === "ah.mp4"){
 		const attachement = new Attachment('https://cdn.discordapp.com/attachments/545281417571991572/595472395159076890/ah.mp4');
 		msg.channel.sendMessage(attachement);
 	}
 	let args = msg.content.substring(PREFIX.length).split(" ");
 	switch(args[0]){
-		case 'test':
-			msg.channel.sendMessage('This is a test.');
-		break;
-		case 'help':
-			const embed = new RichEmbed()
-			.setTitle('Available Commands :')
-			.addField('General commands', "'help' : Shows you all available commands. \n 'kick' : Kicks a specific user from the server. \n 'ban' : Ban a specific user from the server. \n 'purge' : Pruge a specific amount of messages on the channel.")
-			.addField('Entertainment commands', "'test' : Just a test. \n 'Pwease send Spanzer's thighs.' (Without the prefix) : Send's Spanzer's thighs.")
-			msg.channel.sendEmbed(embed);
-		break;
 		case 'purge':
 			if(!msg.member.hasPermission("MANAGE_MESSAGES")) return msg.channel.sendMessage("You don't have the permission to purge messages!");
 			if(!msg.guild.me.hasPermission("MANAGE_MESSAGES")) return msg.channel.sendMessage("I don't have the allowed permission to purge messages!");
