@@ -36,6 +36,10 @@ bot.on('message', msg=>{
 		const attachement = new Attachment('https://cdn.discordapp.com/attachments/574629212258959387/594448748256428042/JPEG_20190510_205536.jpg');
 		msg.channel.sendMessage(attachement);
 	}
+	if(msg.content === "Ah.mp4"){
+		const attachement = new Attachment('https://cdn.discordapp.com/attachments/545281417571991572/595472395159076890/ah.mp4');
+		msg.channel.sendMessage(attachement);
+	}
 	let args = msg.content.substring(PREFIX.length).split(" ");
 	switch(args[0]){
 		case 'test':
