@@ -38,13 +38,13 @@ bot.on('message', msg=>{
 	if(msg.content === "-gang info"){
 		const gembed = new RichEmbed()
 		.setTitle('Ɦıᴅᴅᴇɴ Ðıᴠısıᴏɴ infos :')
-		.addField('Members', "18 Official members")
+		.addField('Members', "18 Official members.")
 		.addField('Allies', "Trash Gang (Kideath) \n Spanzer Gang (Spanzer) \n Ωmega Gang (Ashlee | Ωmega) \n File Drop Zone (ShadowWovle)")
 		.setColor(0x160033);
 		msg.channel.sendEmbed(gembed);
 	}
 	if(msg.content === "-allies"){
-		msg.author.sendMessage("only a quick test.");
+		msg.author.sendMessage("Trash Gang: https://discord.gg/aMh99NS \n Spanzer Gang: https://discord.gg/5VU2sZ5 \n Ωmega Gang: https://discord.gg/SkxaYs6 \n File Drop Zone: https://discord.gg/ywd2Pkm");
 		msg.channel.sendMessage("Allies invite links has been sent to you in your DM's");
 	}
 	if(msg.content === "-help"){
