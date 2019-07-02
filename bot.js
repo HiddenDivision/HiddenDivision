@@ -3,6 +3,7 @@ const bot = new Client();
 
 
 const PREFIX = '​';
+const PREFIX2 = '-';
 
 bot.on('ready', () =>{
 	console.log('Hidden division is now hidden.');
@@ -29,22 +30,15 @@ bot.on('message', msg=>{
 	if(msg.content === "I'm hidden."){
 		msg.reply('Ｓｔａｙ  ｈｉｄｄｅｎ  ｔｈｅｎ．');
 	}
+	if(msg.content === "I'm not hidden."){
+		msg.reply('Why are you still here then?');
+	}
 	if(msg.content === "Pwease send Spanzer's thighs."){
 		const attachement = new Attachment('https://cdn.discordapp.com/attachments/574629212258959387/594448748256428042/JPEG_20190510_205536.jpg');
 		msg.channel.sendMessage(attachement);
 	}
 	let args = msg.content.substring(PREFIX.length).split(" ");
 	switch(args[0]){
-		case 'test':
-			msg.channel.sendMessage('This is a test.');
-		break;
-		case 'help':
-			const embed = new RichEmbed()
-			.setTitle('Available Commands :')
-			.addField('General commands', "'help' : Shows you all available commands. \n 'kick' : Kicks a specific user from the server. \n 'ban' : Ban a specific user from the server. \n 'purge' : Pruge a specific amount of messages on the channel.")
-			.addField('Entertainment commands', "'test' : Just a test. \n 'Pwease send Spanzer's thighs.' (Without the prefix) : Send's Spanzer's thighs.")
-			msg.channel.sendEmbed(embed);
-		break;
 		case 'purge':
 			if(!msg.member.hasPermission("MANAGE_MESSAGES")) return msg.channel.sendMessage("You don't have the permission to purge messages!");
 			if(!msg.guild.me.hasPermission("MANAGE_MESSAGES")) return msg.channel.sendMessage("I don't have the allowed permission to purge messages!");
@@ -119,6 +113,20 @@ bot.on('message', msg=>{
 			const uembed = new RichEmbed()
 			.setTitle('User has been unbanned!')
 			msg.channel.sendEmbed(uembed);
+		break;
+	}
+	let args2 = msg.content.substring(PREFIX2.length).split(" ");
+	switch(args2[0]){
+		case 'test':
+			msg.channel.sendMessage('This is a test.');
+		break;
+		case 'help':
+			const embed = new RichEmbed()
+			.setTitle('Available Commands :')
+			.addField('General commands', "'help' : Shows you all available commands. \n 'kick' (With the hidden prefix) : Kicks a specific user from the server. \n 'ban' (With the hidden prefix) : Ban a specific user from the server. \n 'purge' (With the hidden prefix) : Pruge a specific amount of messages on the channel.")
+			.addField('Entertainment commands', "'test' : Just a test. \n 'Pwease send Spanzer's thighs.' (Without the prefix) : Send's Spanzer's thighs.")
+			.addField('Current normal prefix', "'-' : It's the current prefix. \n The hidden prefix is secret and kept away from others for more security.")
+			msg.channel.sendEmbed(embed);
 		break;
 	}
 })
