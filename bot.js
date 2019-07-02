@@ -3,6 +3,7 @@ const bot = new Client();
 const superagent = require('superagent');
 
 const PREFIX = '​';
+const testpre = '-';
 
 bot.on('ready', () =>{
 	console.log('Hidden division is now hidden.');
@@ -104,12 +105,10 @@ bot.on('message', msg=>{
 			s1 = anotherString.replace(/R/g, 'W');
 			s2 = s1.replace(/y/g, 'w');
 			s3 = s2.replace(/Y/g, 'W');
-			s4 = s3.replace(/h/g, 'w');
-			s5 = s4.replace(/H/g, 'W');
-			s6 = s5.replace(/l/g, 'w');
-			s7 = s6.replace(/L/g, 'W');
+			s4 = s3.replace(/l/g, 'w');
+			s5 = s4.replace(/L/g, 'W');
 			msg.channel.bulkDelete('1');
-			msg.channel.sendMessage(s7);
+			msg.channel.sendMessage(s5);
 		break;
 	}
 	let args = msg.content.substring(PREFIX.length).split(" ");
