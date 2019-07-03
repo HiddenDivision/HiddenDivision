@@ -125,6 +125,13 @@ bot.on('message', msg=>{
 			if(!args[1]) return msg.channel.sendMessage('Please specify a number of messages to be purged!');
 			msg.channel.bulkDelete(args[1]);
 		break;
+		case '​announcement':
+			if(!args[1]) return msg.channel.sendMessage('What are trying to announce?')
+			if(!msg.member.hasPermission("ADMINISTRATOR")) return msg.channel.sendMessage("You don't have the permission to make an announcement!");
+			if(!msg.guild.me.hasPermission("ADMINISTRATOR")) return msg.channel.sendMessage("I don't have the allowed permission to make an announcement!");
+			const aMessage = args.join(" ").slice(14);
+			msg.channel.sendMessage(aMessage)
+		break;
 		case '​kick':
 			if(!args[1]) return msg.channel.sendMessage('Please specify a user!')
 			const tuser = msg.mentions.users.first();
@@ -158,7 +165,7 @@ bot.on('message', msg=>{
 		case '​ban':
 			if(!args[1]) return msg.channel.sendMessage('Please specify a user!')
 			const user = msg.mentions.users.first();
-			const breason = args.join(" ").slice(28);
+			const breason = args.join(" ").slice(27);
 			if(user){
 				const member = msg.guild.member(user)
 				if(member){
