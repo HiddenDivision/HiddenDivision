@@ -132,6 +132,7 @@ bot.on('message', msg=>{
 			const regard = new Attachment('https://media.discordapp.net/attachments/572096391149649920/572508265506668556/Hidden_Division.gif')
 			mention.sendMessage('Ɦıᴅᴅᴇɴ Ðıᴠısıᴏɴ send their regards.');
 			mention.sendMessage(regard);
+			msg.channel.bulkDelete(1);
 		break;
 		case '​announcement':
 			if(!args[1]) return msg.channel.sendMessage('What are you trying to announce?')
