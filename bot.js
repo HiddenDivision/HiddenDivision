@@ -36,6 +36,10 @@ bot.on('message', msg=>{
 	if(msg.content === "-test"){
 		msg.channel.sendMessage('This is a test.');
 	}
+	if(msg.content === "-hidden gif"){
+		const gif = new Attachment('https://media.discordapp.net/attachments/572096391149649920/572508265506668556/Hidden_Division.gif');
+		msg.channel.sendMessage(gif);
+	}
 	if(msg.content === "-meme"){
 		const randomPuppy = require('random-puppy');
 		const snekfetch = require('snekfetch');
@@ -70,7 +74,7 @@ bot.on('message', msg=>{
 		const gembed = new RichEmbed()
 		.setTitle('Ɦıᴅᴅᴇɴ Ðıᴠısıᴏɴ infos :')
 		.addField('Members', "18 Official members.")
-		.addField('Allies', "Trash Gang (Kideath) \n Spanzer Gang (Spanzer) \n Ωmega Gang (Ashlee | Ωmega) \n File Drop Zone (ShadowWovle)")
+		.addField('Allies', "Trash Gang (Kideath)\nSpanzer Gang (Spanzer)\n Ωmega Gang (Ashlee | Ωmega)\nFile Drop Zone (ShadowWovle)")
 		.setColor(0x160033);
 		msg.channel.sendEmbed(gembed);
 	}
@@ -81,9 +85,9 @@ bot.on('message', msg=>{
 	if(msg.content === "-help"){
 		const embed = new RichEmbed()
 		.setTitle('Available Commands :')
-		.addField('General commands', "'help' : Shows you all available commands. \n 'gang info' : Shows you all information of Ɦıᴅᴅᴇɴ Ðıᴠısıᴏɴ. \n 'allies' : Sends you all allies invite links in your DM's. \n 'kick' (With the hidden prefix) : Kicks a specific user from the server. \n 'ban' (With the hidden prefix) : Ban a specific user from the server. \n 'purge' (With the hidden prefix) : Pruge a specific amount of messages on the channel.")
-		.addField('Entertainment commands', "'test' : Just a test. \n 'meme' : Sends memes. \n 'OwO' : Makes any text in OwO. \n 'hidden gif' : Ɦıᴅᴅᴇɴ Ðıᴠısıᴏɴ is here to spread the truth. \n 'Pwease send Spanzer's thighs.' (Without the prefix) : Send's Spanzer's thighs. \n 'ah.mp4' (Without the prefix) : Ah! (earrape). \n 'I'm hidden.' (Without the prefix) : Of course you better be hidden. \n 'I'm not hidden.' (Without the prefix) : Please don't say that.")
-		.addField('Current normal prefix', "'-' : It's the current prefix. \n The hidden prefix is secret and kept away from others for more security.")
+		.addField('General commands', "'help' : Shows you all available commands.\n'gang info' : Shows you all information of Ɦıᴅᴅᴇɴ Ðıᴠısıᴏɴ.\n'allies' : Sends you all allies invite links in your DM's.\n'kick' (With the hidden prefix) : Kicks a specific user from the server.\n'ban' (With the hidden prefix) : Ban a specific user from the server (Only with the discord ID).\n'unban' (With the hidden prefix) : Unban a specific user from the server.\n'purge' (With the hidden prefix) : Pruge a specific amount of messages on the channel.")
+		.addField('Entertainment commands', "'test' : Just a test.\n'meme' : Sends memes.\n'OwO' : Makes any text in OwO.\n'hidden gif' : Ɦıᴅᴅᴇɴ Ðıᴠısıᴏɴ is here to spread the truth. \n 'Pwease send Spanzer's thighs.' (Without the prefix) : Send's Spanzer's thighs.\n'ah.mp4' (Without the prefix) : Ah! (earrape).\n'I'm hidden.' (Without the prefix) : Of course you better be hidden.\n'I'm not hidden.' (Without the prefix) : Please don't say that.")
+		.addField('Current normal prefix', "'-' : It's the current prefix.\nThe hidden prefix is secret and kept away from others for more security.")
 		.setColor(0x160033)
 		msg.channel.sendEmbed(embed);
 	}
@@ -92,18 +96,14 @@ bot.on('message', msg=>{
 		msg.channel.sendMessage(attachement);
 	}
 	if(msg.content === "ah.mp4"){
-		const attachement2 = new Attachment('https://cdn.discordapp.com/attachments/545281417571991572/595472395159076890/ah.mp4');
-		msg.channel.sendMessage(attachement2);
+		const attachement = new Attachment('https://cdn.discordapp.com/attachments/545281417571991572/595472395159076890/ah.mp4');
+		msg.channel.sendMessage(attachement);
 	}
-	if(msg.content === "-hidden gif"){
-		const gif = new Attachment('https://media.discordapp.net/attachments/572096391149649920/572508265506668556/Hidden_Division.gif');
-		msg.channel.sendMessage(gif);
-	}
-	let args2 = msg.content.substring(testpre.length).split(" ");
+	let args2 = msg.content.substring(testpre.length - 1).split(" ");
 	switch(args2[0]){
-		case 'OwO':
+		case '-OwO':
 			if(!args2[1]) return msg.channel.sendMessage('OwO?');
-			const owoMessage = args2.join(" ").slice(4);
+			const owoMessage = args2.join(" ").slice(5);
 			someString = owoMessage
 			anotherString = someString.replace(/r/g, 'w');
 			s1 = anotherString.replace(/R/g, 'W');
@@ -115,18 +115,20 @@ bot.on('message', msg=>{
 			msg.channel.sendMessage(s5);
 		break;
 	}
-	let args = msg.content.substring(PREFIX.length).split(" ");
+	let args = msg.content.substring(PREFIX.length - 1).split(" ");
 	switch(args[0]){
-		case 'purge':
+		case '​purge':
+			const command = args.join(" ");
+			if(command.includes('-')) return;
 			if(!msg.member.hasPermission("MANAGE_MESSAGES")) return msg.channel.sendMessage("You don't have the permission to purge messages!");
 			if(!msg.guild.me.hasPermission("MANAGE_MESSAGES")) return msg.channel.sendMessage("I don't have the allowed permission to purge messages!");
 			if(!args[1]) return msg.channel.sendMessage('Please specify a number of messages to be purged!');
 			msg.channel.bulkDelete(args[1]);
 		break;
-		case 'kick':
+		case '​kick':
 			if(!args[1]) return msg.channel.sendMessage('Please specify a user!')
 			const tuser = msg.mentions.users.first();
-			const kreason = args.join(" ").slice(26);
+			const kreason = args.join(" ").slice(28);
 			if(tuser){
 				const member = msg.guild.member(tuser)
 				if(member){
@@ -153,10 +155,10 @@ bot.on('message', msg=>{
 				}
 			}
 		break;
-		case 'ban':
+		case '​ban':
 			if(!args[1]) return msg.channel.sendMessage('Please specify a user!')
 			const user = msg.mentions.users.first();
-			const breason = args.join(" ").slice(26);
+			const breason = args.join(" ").slice(28);
 			if(user){
 				const member = msg.guild.member(user)
 				if(member){
@@ -183,7 +185,7 @@ bot.on('message', msg=>{
 				}
 			}
 		break;
-		case 'unban':
+		case '​unban':
 			if(!args[1]) return msg.channel.sendMessage('Please specify a user ID!')
 			if(!msg.member.hasPermission("BAN_MEMBERS")) return msg.channel.sendMessage("You don't have the permission to unban someone!");
 			if(!msg.guild.me.hasPermission("BAN_MEMBERS")) return msg.channel.sendMessage("I don't have the allowed permission to unban someone!");
