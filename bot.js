@@ -125,8 +125,16 @@ bot.on('message', msg=>{
 			if(!args[1]) return msg.channel.sendMessage('Please specify a number of messages to be purged!');
 			msg.channel.bulkDelete(args[1]);
 		break;
+		case '​iregards':
+			mention = msg.mentions.users.first();
+			if(!msg.member.roles.find(r => r.name === "Leader")) return msg.channel.sendMessage("You are not the leader. You can't do that.");
+			if(!args[1]) return msg.channel.sendMessage('Who are you trying to send your regards?')
+			const regard = new Attachment('https://media.discordapp.net/attachments/572096391149649920/572508265506668556/Hidden_Division.gif')
+			mention.sendMessage('Ɦıᴅᴅᴇɴ Ðıᴠısıᴏɴ send their regards.');
+			mention.sendMessage(regard);
+		break;
 		case '​announcement':
-			if(!args[1]) return msg.channel.sendMessage('What are trying to announce?')
+			if(!args[1]) return msg.channel.sendMessage('What are you trying to announce?')
 			if(!msg.member.hasPermission("ADMINISTRATOR")) return msg.channel.sendMessage("You don't have the permission to make an announcement!");
 			if(!msg.guild.me.hasPermission("ADMINISTRATOR")) return msg.channel.sendMessage("I don't have the allowed permission to make an announcement!");
 			const aMessage = args.join(" ").slice(14);
