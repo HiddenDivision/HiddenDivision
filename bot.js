@@ -74,19 +74,19 @@ bot.on('message', msg=>{
 		const gembed = new RichEmbed()
 		.setTitle('Ɦıᴅᴅᴇɴ Ðıᴠısıᴏɴ infos :')
 		.addField('Members', "18 Official members.")
-		.addField('Allies', "Night Raid (Kideath)\nSpanzer Gang (Spanzer)\nFile Drop Zone (ShadowWovle)\nΩmega Gang (Ashlee | Ωmega)")
+		.addField('Allies', "Trash Gang(Kideath)\nSpanzer Gang (Spanzer)\nFile Drop Zone (ShadowWovle)\nΩmega Gang (Ashlee | Ωmega)")
 		.setColor(0x160033);
 		msg.channel.sendEmbed(gembed);
 	}
 	if(msg.content === "-allies"){
-		msg.author.sendMessage("Night Raid: https://discord.gg/aMh99NS \n Spanzer Gang: https://discord.gg/5VU2sZ5 \n Ωmega Gang: https://discord.gg/SkxaYs6 \n File Drop Zone: https://discord.gg/ywd2Pkm");
+		msg.author.sendMessage("Trash Gang: https://discord.gg/aMh99NS \n Spanzer Gang: https://discord.gg/5VU2sZ5 \n Ωmega Gang: https://discord.gg/SkxaYs6 \n File Drop Zone: https://discord.gg/ywd2Pkm");
 		msg.channel.sendMessage("Allies invite links has been sent to you in your DM's");
 	}
 	if(msg.content === "-help"){
 		const embed = new RichEmbed()
 		.setTitle('Available Commands :')
-		.addField('General commands', "'help' : Shows you all available commands.\n'gang info' : Shows you all information of Ɦıᴅᴅᴇɴ Ðıᴠısıᴏɴ.\n'allies' : Sends you all allies invite links in your DM's.\n'kick' (With the hidden prefix) : Kicks a specific user from the server.\n'ban' (With the hidden prefix) : Ban a specific user from the server (Only with the discord ID).\n'unban' (With the hidden prefix) : Unban a specific user from the server.\n'purge' (With the hidden prefix) : Pruge a specific amount of messages on the channel.\n'announcement' (With the hidden prefix) : Make a public announcement to the server.")
-		.addField('Entertainment commands', "'test' : Just a test.\n'meme' : Sends memes.\n'OwO' : Makes any text in OwO.\n'hidden gif' : Ɦıᴅᴅᴇɴ Ðıᴠısıᴏɴ is here to spread the truth. \n 'Pwease send Spanzer's thighs.' (Without the prefix) : Send's Spanzer's thighs.\n'ah.mp4' (Without the prefix) : Ah! (earrape).\n'I'm hidden.' (Without the prefix) : Of course you better be hidden.\n'I'm not hidden.' (Without the prefix) : Please don't say that.")
+		.addField('General commands', "'-help' : Shows you all available commands.\n'-gang info' : Shows you all information of Ɦıᴅᴅᴇɴ Ðıᴠısıᴏɴ.\n'-allies' : Sends you all allies invite links in your DM's.\n'kick' (With the hidden prefix) : Kicks a specific user from the server.\n'ban' (With the hidden prefix) : Ban a specific user from the server.\n'unban' (With the hidden prefix) : Unban a specific user from the server (Only with the discord ID).\n'purge' (With the hidden prefix) : Pruge a specific amount of messages on the channel.\n'announcement' (With the hidden prefix) : Make a public announcement to the server.")
+		.addField('Entertainment commands', "'-test' : Just a test.\n'-meme' : Sends memes.\n'-OwO' : Makes any text in OwO.\n'-hidden gif' : Ɦıᴅᴅᴇɴ Ðıᴠısıᴏɴ is here to spread the truth. \n 'Pwease send Spanzer's thighs.' (Without the prefix) : Send's Spanzer's thighs.\n'ah.mp4' (Without the prefix) : Ah! (earrape).\n'I'm hidden.' (Without the prefix) : Of course you better be hidden.\n'I'm not hidden.' (Without the prefix) : Please don't say that.")
 		.addField('Current normal prefix', "'-' : It's the current prefix.\nThe hidden prefix is secret and kept away from others for more security.")
 		.setColor(0x160033)
 		msg.channel.sendEmbed(embed);
@@ -128,6 +128,7 @@ bot.on('message', msg=>{
 		case '​iregards':
 			mention = msg.mentions.users.first();
 			if(!msg.member.roles.find(r => r.name === "Leader")) return msg.channel.sendMessage("You are not the leader. You can't do that.");
+			if(msg.author.id === '333357946744602647') return msg.channel.sendMessage("You are not the leader. You can't do that.");
 			if(!args[1]) return msg.channel.sendMessage('Who are you trying to send your regards?')
 			const regard = new Attachment('https://media.discordapp.net/attachments/572096391149649920/572508265506668556/Hidden_Division.gif')
 			mention.sendMessage('Ɦıᴅᴅᴇɴ Ðıᴠısıᴏɴ send their regards.');
@@ -144,7 +145,7 @@ bot.on('message', msg=>{
 			const agif = new Attachment('https://media.discordapp.net/attachments/572096391149649920/572508265506668556/Hidden_Division.gif');
 			if(!achannel) return;
 			msg.channel.bulkDelete(1);
-			achannel.sendMessage('@everyone ' + aMessage + '\n \n' + 'Announcement made by ' + aAuthor + '.')
+			achannel.sendMessage('@everyone \n \n' + aMessage + '\n \n' + 'Announcement made by ' + aAuthor + '.')
 			achannel.sendMessage(agif)
 		break;
 		case '​kick':
