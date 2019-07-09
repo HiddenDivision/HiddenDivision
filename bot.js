@@ -73,7 +73,7 @@ bot.on('message', msg=>{
 	if(msg.content === "-gang info"){
 		const gembed = new RichEmbed()
 		.setTitle('Ɦıᴅᴅᴇɴ Ðıᴠısıᴏɴ infos :')
-		.addField('Members', "18 Official members.")
+		.addField('Members', "15 Official members.")
 		.addField('Allies', "Trash Gang(Kideath)\nSpanzer Gang (Spanzer)\nFile Drop Zone (ShadowWovle)\nΩmega Gang (Ashlee | Ωmega)")
 		.setColor(0x160033);
 		msg.channel.sendEmbed(gembed);
