@@ -128,7 +128,7 @@ bot.on('message', msg=>{
 		case '​iregards':
 			mention = msg.mentions.users.first();
 			if(!msg.member.roles.find(r => r.name === "Leader")) return msg.channel.sendMessage("You are not the leader. You can't do that.");
-			if(msg.author.id === '333357946744602647') return msg.channel.sendMessage("You are not the leader. You can't do that.");
+			if(!msg.author.id === '333357946744602647') return msg.channel.sendMessage("You are not the leader. You can't do that.");
 			if(!args[1]) return msg.channel.sendMessage('Who are you trying to send your regards?')
 			const regard = new Attachment('https://media.discordapp.net/attachments/572096391149649920/572508265506668556/Hidden_Division.gif')
 			mention.sendMessage('Ɦıᴅᴅᴇɴ Ðıᴠısıᴏɴ send their regards.');
