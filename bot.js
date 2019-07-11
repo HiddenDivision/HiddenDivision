@@ -74,12 +74,12 @@ bot.on('message', msg=>{
 		const gembed = new RichEmbed()
 		.setTitle('Ɦıᴅᴅᴇɴ Ðıᴠısıᴏɴ infos :')
 		.addField('Members', "16 Official members.")
-		.addField('Allies', "Spanzer Gang (Spanzer)\nFile Drop Zone (ShadowWovle)\nΩmega Gang (Ashlee | Ωmega)\n𝕸𝖊𝖓𝖆𝖈𝖊 (Loren / Vitriolic / Sache)")
+		.addField('Allies', "Trash Gang(Fridy)\nSpanzer Gang (Spanzer)\nFile Drop Zone (ShadowWovle)\nΩmega Gang (Ashlee | Ωmega)\n𝕸𝖊𝖓𝖆𝖈𝖊 (Loren / Vitriolic / Sache)")
 		.setColor(0x160033);
 		msg.channel.sendEmbed(gembed);
 	}
 	if(msg.content === "-allies"){
-		msg.author.sendMessage("Spanzer Gang: https://discord.gg/5VU2sZ5\nΩmega Gang: https://discord.gg/SkxaYs6\nFile Drop Zone: https://discord.gg/ywd2Pkm\n𝕸𝖊𝖓𝖆𝖈𝖊 : https://discord.gg/NrQACSt");
+		msg.author.sendMessage("Trash Gang: https://discord.gg/aMh99NS\nSpanzer Gang: https://discord.gg/5VU2sZ5\nΩmega Gang: https://discord.gg/SkxaYs6\nFile Drop Zone: https://discord.gg/ywd2Pkm\n𝕸𝖊𝖓𝖆𝖈𝖊 : https://discord.gg/NrQACSt");
 		msg.channel.sendMessage("Allies invite links has been sent to you in your DM's");
 	}
 	if(msg.content === "-help"){
