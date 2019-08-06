@@ -79,7 +79,7 @@ bot.on('message', msg=>{
 		msg.channel.sendEmbed(gembed);
 	}
 	if(msg.content === "-allies"){
-		msg.author.sendMessage("Trash Gang: https://discord.gg/7Hd32d4\n𝔅𝔬𝔯𝔫 𝔎𝔦𝔩𝔩𝔢𝔯𝔰: https://discord.gg/Bb9s5hm\nKFC Gang: https://discord.gg/bw7NXMn\nΩmega Gang: https://discord.gg/SkxaYs6\nFile Drop Zone: https://discord.gg/ywd2Pkm\n𝕸𝖊𝖓𝖆𝖈𝖊: https://discord.gg/NrQACSt\nTrip Gang: https://discord.gg/EdUhmV2\n𝔻𝕖𝕕𝕤𝕖𝕔 ℂ𝕝𝕒𝕤𝕤𝕚𝕗𝕚𝕖𝕕: https://discord.gg/fstWMze\nHarmony: https://discord.gg/ZfFc6HB\nKiwi Gang: https://discord.gg/JE3cUWW");
+		msg.author.sendMessage("Trash Gang: https://discord.gg/7Hd32d4\nKFC Gang: https://discord.gg/bw7NXMn\nΩmega Gang: https://discord.gg/SkxaYs6\nFile Drop Zone: https://discord.gg/ywd2Pkm\n𝕸𝖊𝖓𝖆𝖈𝖊: https://discord.gg/NrQACSt\nTrip Gang: https://discord.gg/EdUhmV2\n𝔻𝕖𝕕𝕤𝕖𝕔 ℂ𝕝𝕒𝕤𝕤𝕚𝕗𝕚𝕖𝕕: https://discord.gg/fstWMze\nHarmony: https://discord.gg/ZfFc6HB\nKiwi Gang: https://discord.gg/JE3cUWW");
 		msg.channel.sendMessage("Allies invite links has been sent to you in your DM's");
 	}
 	if(msg.content === "-help"){
