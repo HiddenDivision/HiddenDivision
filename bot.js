@@ -74,12 +74,12 @@ bot.on('message', msg=>{
 		const gembed = new RichEmbed()
 		.setTitle('Ɦıᴅᴅᴇɴ Ðıᴠısıᴏɴ infos :')
 		.addField('Members', "16 Official members.")
-		.addField('Allies', "𝔅𝔬𝔯𝔫 𝔎𝔦𝔩𝔩𝔢𝔯𝔰(ℭ𝔲𝔯𝔰𝔵𝔡𝔟𝔞𝔢 / Fridy)\nSpanzer Gang (Spanzer)\nFile Drop Zone (ShadowWovle)\nΩmega Gang (Ashlee | Ωmega)\n𝕸𝖊𝖓𝖆𝖈𝖊 (Loren / Vitriolic / Sache)\nTrip Gang (cyb3r)\nKFC Gang (Frostbite / ℭ𝔲𝔯𝔰𝔵𝔡𝔟𝔞𝔢)\n𝔻𝕖𝕕𝕤𝕖𝕔 ℂ𝕝𝕒𝕤𝕤𝕚𝕗𝕚𝕖𝕕 (Frostbite)\nHarmony (Zendremeda)\nKiwi Gang (Nulaa)")
+		.addField('Allies', "Trash Gang (Kideath)\n𝔅𝔬𝔯𝔫 𝔎𝔦𝔩𝔩𝔢𝔯𝔰c (ℭ𝔲𝔯𝔰𝔵𝔡𝔟𝔞𝔢 / Fridy)\nSpanzer Gang (Spanzer)\nFile Drop Zone (ShadowWovle)\nΩmega Gang (Ashlee | Ωmega)\n𝕸𝖊𝖓𝖆𝖈𝖊 (Loren / Vitriolic / Sache)\nTrip Gang (cyb3r)\nKFC Gang (Frostbite / ℭ𝔲𝔯𝔰𝔵𝔡𝔟𝔞𝔢)\n𝔻𝕖𝕕𝕤𝕖𝕔 ℂ𝕝𝕒𝕤𝕤𝕚𝕗𝕚𝕖𝕕 (Frostbite)\nHarmony (Zendremeda)\nKiwi Gang (Nulaa)")
 		.setColor(0x160033);
 		msg.channel.sendEmbed(gembed);
 	}
 	if(msg.content === "-allies"){
-		msg.author.sendMessage("𝔅𝔬𝔯𝔫 𝔎𝔦𝔩𝔩𝔢𝔯𝔰: https://discord.gg/Bb9s5hm\nKFC Gang: https://discord.gg/bw7NXMn\nΩmega Gang: https://discord.gg/SkxaYs6\nFile Drop Zone: https://discord.gg/ywd2Pkm\n𝕸𝖊𝖓𝖆𝖈𝖊: https://discord.gg/NrQACSt\nTrip Gang: https://discord.gg/EdUhmV2\n𝔻𝕖𝕕𝕤𝕖𝕔 ℂ𝕝𝕒𝕤𝕤𝕚𝕗𝕚𝕖𝕕: https://discord.gg/fstWMze\nHarmony: https://discord.gg/ZfFc6HB\nKiwi Gang: https://discord.gg/JE3cUWW");
+		msg.author.sendMessage("Trash Gang: https://discord.gg/7Hd32d4\n𝔅𝔬𝔯𝔫 𝔎𝔦𝔩𝔩𝔢𝔯𝔰: https://discord.gg/Bb9s5hm\nKFC Gang: https://discord.gg/bw7NXMn\nΩmega Gang: https://discord.gg/SkxaYs6\nFile Drop Zone: https://discord.gg/ywd2Pkm\n𝕸𝖊𝖓𝖆𝖈𝖊: https://discord.gg/NrQACSt\nTrip Gang: https://discord.gg/EdUhmV2\n𝔻𝕖𝕕𝕤𝕖𝕔 ℂ𝕝𝕒𝕤𝕤𝕚𝕗𝕚𝕖𝕕: https://discord.gg/fstWMze\nHarmony: https://discord.gg/ZfFc6HB\nKiwi Gang: https://discord.gg/JE3cUWW");
 		msg.channel.sendMessage("Allies invite links has been sent to you in your DM's");
 	}
 	if(msg.content === "-help"){
