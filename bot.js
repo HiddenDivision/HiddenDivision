@@ -12,7 +12,7 @@ bot.on('ready', () =>{
 
 bot.on('guildMemberAdd', member =>{
 
-	const channel = member.guild.channels.find(channel => channel.name === "wɇƚ¢¤₥ɇ");
+	const channel = member.guild.channels.find(channel => channel.id === "608538688913276928");
 	if(!channel) return;
 	let role = member.guild.roles.find("name", "Hidden user.");
 	member.addRole(role.id);
@@ -21,7 +21,7 @@ bot.on('guildMemberAdd', member =>{
 
 bot.on('guildMemberRemove', member =>{
 
-	const channel = member.guild.channels.find(channel => channel.name === "wɇƚ¢¤₥ɇ");
+	const channel = member.guild.channels.find(channel => channel.id === "608538688913276928");
 	if(!channel) return;
 	channel.sendMessage(`I guess ${member} wasn't hidden to stay here...`)
 })
