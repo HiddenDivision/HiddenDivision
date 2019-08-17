@@ -22,7 +22,7 @@ bot.on('guildMemberAdd', member =>{
         .setDescription(`Be sure you are hidden over here, ${member}.`)
         .setImage(`https://cdn.discordapp.com/attachments/608560289851375616/612150854958710784/Hidden_Banner.gif`)
         .setColor(0x160033)
-        member.sendEmbed(embed9)
+        channel.sendEmbed(embed9)
     }
     else{
         const embed = new RichEmbed()
@@ -30,7 +30,7 @@ bot.on('guildMemberAdd', member =>{
         .setDescription(`Be sure you are hidden over here, ${member}.`)
         .setImage(`https://cdn.discordapp.com/attachments/608560289851375616/612150854958710784/Hidden_Banner.gif`)
         .setColor(0x160033)
-        member.sendEmbed(embed)
+        channel.sendEmbed(embed)
     }
 	if(member.guild.memberCount === 200){
 		channel.sendMessage(`${member}, you are the 200th member!`);
@@ -59,7 +59,7 @@ bot.on('guildMemberRemove', member =>{
 
 	const channel = member.guild.channels.find(channel => channel.id === "608538688913276928");
 	if(!channel) return;
-	channel.sendMessage(`${member.username} got caught.`)
+	channel.sendMessage(`${member} got caught.`)
 })
 
 bot.on('message', msg=>{
