@@ -59,7 +59,7 @@ bot.on('guildMemberRemove', member =>{
 
 	const channel = member.guild.channels.find(channel => channel.id === "608538688913276928");
 	if(!channel) return;
-	channel.sendMessage(`${member} got caught.`)
+	channel.sendMessage(`${member.username} got caught.`)
 })
 
 bot.on('message', msg=>{
