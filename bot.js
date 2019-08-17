@@ -16,7 +16,22 @@ bot.on('guildMemberAdd', member =>{
 	if(!channel) return;
 	let role = member.guild.roles.find("name", "Hidden user.");
 	member.addRole(role.id);
-	channel.sendMessage(`Welcome in Ɦıᴅᴅᴇɴ Ðıᴠısıᴏɴ Ᵽᴜʙʟıᴄ. Be sure you are hidden over here, ${member}.`);
+	if(member.avatarURL === null){
+        const embed9 = new RichEmbed()
+        .setAuthor(`Welcome in Ɦıᴅᴅᴇɴ Ðıᴠısıᴏɴ Ᵽᴜʙʟıᴄ, ${member.username}!`, ``, '')
+        .setDescription(`Be sure you are hidden over here, ${member}.`)
+        .setImage(`https://cdn.discordapp.com/attachments/608560289851375616/612150854958710784/Hidden_Banner.gif`)
+        .setColor(0x160033)
+        msg.channel.sendEmbed(embed9)
+    }
+    else{
+        const embed = new RichEmbed()
+        .setAuthor(`Welcome in Ɦıᴅᴅᴇɴ Ðıᴠısıᴏɴ Ᵽᴜʙʟıᴄ, ${member.username}!`, `${member.avatarURL}`, '')
+        .setDescription(`Be sure you are hidden over here, ${member}.`)
+        .setImage(`https://cdn.discordapp.com/attachments/608560289851375616/612150854958710784/Hidden_Banner.gif`)
+        .setColor(0x160033)
+        msg.channel.sendEmbed(embed)
+    }
 	if(member.guild.memberCount === 200){
 		channel.sendMessage(`${member}, you are the 200th member!`);
 	}
@@ -44,7 +59,7 @@ bot.on('guildMemberRemove', member =>{
 
 	const channel = member.guild.channels.find(channel => channel.id === "608538688913276928");
 	if(!channel) return;
-	channel.sendMessage(`I guess ${member} wasn't hidden to stay here...`)
+	channel.sendMessage(`${member} got caught.`)
 })
 
 bot.on('message', msg=>{
