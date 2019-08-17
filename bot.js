@@ -125,7 +125,7 @@ bot.on('message', msg=>{
 		msg.channel.sendEmbed(gembed);
 	}
 	if(msg.content === "-allies"){
-		msg.author.sendMessage("Trash Gang: https://discord.gg/7Hd32d4\nSpanzer Gang: https://discord.gg/9e7nCuC\nKFC Gang: https://discord.gg/bw7NXMn\nΩmega Gang: https://discord.gg/SkxaYs6\nFile Drop Zone: https://discord.gg/ywd2Pkm\n𝕸𝖊𝖓𝖆𝖈𝖊: https://discord.gg/NrQACSt\nTrip Gang: https://discord.gg/EdUhmV2\n𝔻𝕖𝕕𝕤𝕖𝕔 ℂ𝕝𝕒𝕤𝕤𝕚𝕗𝕚𝕖𝕕: https://discord.gg/VJ8g3GM\nHarmony: https://discord.gg/ZfFc6HB\nKiwi Gang: https://discord.gg/JE3cUWW\nLowkeyWeebs: https://discord.gg/5ddNZA6\nBabydoll's Dollhouse: https://discord.gg/yw2hhwj\nＬｏｎｅｌｙ　Ｇａｎｇ　うつ病: https://discord.gg/WP3d5PU\nKG Knuckles Gang: https://discord.gg/3v3z9u6\nThe Leak Squad: https://discord.gg/JrpswGq";
+		msg.author.sendMessage("Trash Gang: https://discord.gg/7Hd32d4\nSpanzer Gang: https://discord.gg/9e7nCuC\nKFC Gang: https://discord.gg/bw7NXMn\nΩmega Gang: https://discord.gg/SkxaYs6\nFile Drop Zone: https://discord.gg/ywd2Pkm\n𝕸𝖊𝖓𝖆𝖈𝖊: https://discord.gg/NrQACSt\nTrip Gang: https://discord.gg/EdUhmV2\n𝔻𝕖𝕕𝕤𝕖𝕔 ℂ𝕝𝕒𝕤𝕤𝕚𝕗𝕚𝕖𝕕: https://discord.gg/VJ8g3GM\nHarmony: https://discord.gg/ZfFc6HB\nKiwi Gang: https://discord.gg/JE3cUWW\nLowkeyWeebs: https://discord.gg/5ddNZA6\nBabydoll's Dollhouse: https://discord.gg/yw2hhwj\nＬｏｎｅｌｙ　Ｇａｎｇ　うつ病: https://discord.gg/WP3d5PU\nKG Knuckles Gang: https://discord.gg/3v3z9u6\nThe Leak Squad: https://discord.gg/JrpswGq");
 		msg.channel.sendMessage("Allies invite links has been sent to you in your DM's");
 	}
 	if(msg.content === "-help"){
