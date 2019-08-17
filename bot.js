@@ -98,13 +98,13 @@ bot.on('message', msg=>{
 	if(msg.content === "-gang info"){
 		const gembed = new RichEmbed()
 		.setTitle('Ɦıᴅᴅᴇɴ Ðıᴠısıᴏɴ infos :')
-		.addField('Members', "16 Official members.")
-		.addField('Allies', "Trash Gang (Kideath)\n𝔅𝔬𝔯𝔫 𝔎𝔦𝔩𝔩𝔢𝔯𝔰c (ℭ𝔲𝔯𝔰𝔵𝔡𝔟𝔞𝔢 / Fridy)\nSpanzer Gang (Spanzer)\nFile Drop Zone (ShadowWovle)\nΩmega Gang (Ashlee | Ωmega)\n𝕸𝖊𝖓𝖆𝖈𝖊 (Loren / Vitriolic / Sache)\nTrip Gang (cyb3r)\nKFC Gang (Frostbite / ℭ𝔲𝔯𝔰𝔵𝔡𝔟𝔞𝔢)\n𝔻𝕖𝕕𝕤𝕖𝕔 ℂ𝕝𝕒𝕤𝕤𝕚𝕗𝕚𝕖𝕕 (Frostbite)\nHarmony (Zendremeda)\nKiwi Gang (Nulaa)")
+		.addField('Members', "21 Official members.")
+		.addField('Allies', "Trash Gang (Kideath)\n𝔅𝔬𝔯𝔫 𝔎𝔦𝔩𝔩𝔢𝔯𝔰c (ℭ𝔲𝔯𝔰𝔵𝔡𝔟𝔞𝔢 / Fridy)\nSpanzer Gang (Spanzer)\nFile Drop Zone (ShadowWovle)\nΩmega Gang (Ashlee | Ωmega)\n𝕸𝖊𝖓𝖆𝖈𝖊 (Loren / Vitriolic / Sache)\nTrip Gang (cyb3r)\nKFC Gang (Frostbite / ℭ𝔲𝔯𝔰𝔵𝔡𝔟𝔞𝔢)\n𝔻𝕖𝕕𝕤𝕖𝕔 ℂ𝕝𝕒𝕤𝕤𝕚𝕗𝕚𝕖𝕕 (Frostbite)\nHarmony (Zendremeda)\nKiwi Gang (Nulaa)\nLowkeyWeebs (Jordan.)\nBabydoll's Dollhouse (Babydoll)\nＬｏｎｅｌｙ　Ｇａｎｇ　うつ病 (M i c r o　☹)\nKG Knuckles Gang (Andromeda / JozielBorges)\nThe Leak Squad (Cutie Kiwa)")
 		.setColor(0x160033);
 		msg.channel.sendEmbed(gembed);
 	}
 	if(msg.content === "-allies"){
-		msg.author.sendMessage("Trash Gang: https://discord.gg/7Hd32d4\nKFC Gang: https://discord.gg/bw7NXMn\nΩmega Gang: https://discord.gg/SkxaYs6\nFile Drop Zone: https://discord.gg/ywd2Pkm\n𝕸𝖊𝖓𝖆𝖈𝖊: https://discord.gg/NrQACSt\nTrip Gang: https://discord.gg/EdUhmV2\n𝔻𝕖𝕕𝕤𝕖𝕔 ℂ𝕝𝕒𝕤𝕤𝕚𝕗𝕚𝕖𝕕: https://discord.gg/fstWMze\nHarmony: https://discord.gg/ZfFc6HB\nKiwi Gang: https://discord.gg/JE3cUWW");
+		msg.author.sendMessage("Trash Gang: https://discord.gg/7Hd32d4\nSpanzer Gang: https://discord.gg/9e7nCuC\nKFC Gang: https://discord.gg/bw7NXMn\nΩmega Gang: https://discord.gg/SkxaYs6\nFile Drop Zone: https://discord.gg/ywd2Pkm\n𝕸𝖊𝖓𝖆𝖈𝖊: https://discord.gg/NrQACSt\nTrip Gang: https://discord.gg/EdUhmV2\n𝔻𝕖𝕕𝕤𝕖𝕔 ℂ𝕝𝕒𝕤𝕤𝕚𝕗𝕚𝕖𝕕: https://discord.gg/VJ8g3GM\nHarmony: https://discord.gg/ZfFc6HB\nKiwi Gang: https://discord.gg/JE3cUWW\nLowkeyWeebs: https://discord.gg/5ddNZA6\nBabydoll's Dollhouse: https://discord.gg/yw2hhwj\nＬｏｎｅｌｙ　Ｇａｎｇ　うつ病: https://discord.gg/WP3d5PU\nKG Knuckles Gang: https://discord.gg/3v3z9u6\nThe Leak Squad: https://discord.gg/JrpswGq";
 		msg.channel.sendMessage("Allies invite links has been sent to you in your DM's");
 	}
 	if(msg.content === "-help"){
