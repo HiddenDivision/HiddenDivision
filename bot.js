@@ -26,7 +26,7 @@ bot.on('guildMemberAdd', member =>{
     }
     else{
         const embed = new RichEmbed()
-        .setAuthor(`Welcome in Ɦıᴅᴅᴇɴ Ðıᴠısıᴏɴ Ᵽᴜʙʟıᴄ, ${member.username}!`, `${member.avatarURL}`, '')
+        .setAuthor(`Welcome in Ɦıᴅᴅᴇɴ Ðıᴠısıᴏɴ Ᵽᴜʙʟıᴄ, ${member.username}!`, ``, '')
         .setDescription(`Be sure you are hidden over here, ${member}.`)
         .setImage(`https://cdn.discordapp.com/attachments/608560289851375616/612150854958710784/Hidden_Banner.gif`)
         .setColor(0x160033)
